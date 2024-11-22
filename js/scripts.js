@@ -75,6 +75,7 @@ const vowelsToUpper = (word) => {
 };
 
 vowelsToUpper('tártaro');
+// reduce admite que le des un valor inicial, por eso a veces se le indica despues de acc un valor que normalmente es ''
 
 // 8 - Crea una función que reciba un array de 10 números y te diga si alguno es mayor de 5.
 
@@ -82,7 +83,8 @@ const overFive = (numbers) => {
   const result = numbers.some((number) => {
     return number > 5;
   });
-  if (result === true) {
+  if (result) {
+    //no es necesario poner condicion porque devuelve true o false
     return `Hay números mayores de 5`;
   }
   return `No hay numeros mayores de 5`;
@@ -151,9 +153,9 @@ const wordsToOrder = (words) => {
 
 const result13 = wordsToOrder(['holassss', 'mundo', 'adioses', 'hija']);
 console.log(result13);
+// strings: a.localeCompare(b)
 
-// 14 - Crea una función que reciba una palabra e imprima la misma palabra en orden inverso conservando las mayúsculas y las minúsculas.
-//Si recibe "Mariposas" deberá imprimir "sasopiraM". No se puede usar reverse()
+// 14 - Crea una función que reciba una palabra e imprima la misma palabra en orden inverso conservando las mayúsculas y las minúsculas. Si recibe "Mariposas" deberá imprimir "sasopiraM". No se puede usar reverse()
 
 const toReverse = (word) => {
   let splitWord = word.split('');
@@ -164,8 +166,7 @@ console.log(result14);
 
 // ## Retos!!
 
-// 15 - Crea una función que reciba un array de 5 números de 2 dígitos. La función debe ser capaz de sumar los digitos de cada número,
-//es decir si yo le envío [21, 34, 87, 10, 28] la función tendrá que ser capaz de devolverme un array con [3, 7, 15, 1, 10]
+// 15 - Crea una función que reciba un array de 5 números de 2 dígitos. La función debe ser capaz de sumar los digitos de cada número, es decir si yo le envío [21, 34, 87, 10, 28] la función tendrá que ser capaz de devolverme un array con [3, 7, 15, 1, 10]
 
 const newArray = (numbers) => {
   return numbers.map(
