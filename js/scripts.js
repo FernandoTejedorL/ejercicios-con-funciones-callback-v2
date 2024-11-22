@@ -158,11 +158,7 @@ console.log(result13);
 
 const toReverse = (word) => {
   let splitWord = word.split('');
-  let emptyWord = [];
-  for (let i = splitWord.length; i >= 0; i--) {
-    emptyWord.push(splitWord[i]);
-  }
-  return emptyWord.join(' ');
+  return splitWord.reduce((acc, letter) => letter + acc);
 };
 const result14 = toReverse('Mariposas');
 console.log(result14);
