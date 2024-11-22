@@ -62,20 +62,19 @@ const poweredNumbers = result6.forEach((number) => {
 // 7 - Crea una función que reciba una palabra e imprima por consola esa palabra pero con las vocales en mayúscula.
 
 const vowelsToUpper = (word) => {
-  const vowels = 'aeiou';
+  const vowels = 'aeiouáéíóú ';
   let newWord = word.split('');
-  let toJoin = [];
-  const result = newWord.forEach((letter) => {
-    if (vowels.includes(letter)) {
-      toJoin.push(letter.toUpperCase());
-    } else {
-      toJoin.push(letter);
+  const result = newWord.map((word) => {
+    if (vowels.includes(word)) {
+      return word.toUpperCase();
     }
+    return word;
   });
-  console.log(toJoin.join(''));
+  const finalResult = result.reduce((acc, word) => acc + word);
+  console.log(finalResult);
 };
 
-vowelsToUpper('cebolla');
+vowelsToUpper('tártaro');
 
 // 8 - Crea una función que reciba un array de 10 números y te diga si alguno es mayor de 5.
 
